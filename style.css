@@ -1,0 +1,122 @@
+/* Base body styling */
+body {
+  font-family: 'Press Start 2P', cursive; /* Pixel-style font */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* Background image settings */
+  background-image: url("images/Background.jpg");
+  background-size: cover;           /* Full screen background */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;     /* Keeps the background fixed while scrolling */
+}
+
+
+/* Main content container */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 100px); /* Full height minus space (e.g., for button) */
+  width: 100%;
+}
+
+main .container {
+  background-color: #d2f1ae;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+}
+
+
+/* Buttons (general) */
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin-top: 15px;
+  background-color: #f97e9d;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ffb3c1;
+}
+
+
+/*Text message style */
+#message {
+  font-size: 1.2rem;
+  color: #444;
+}
+
+
+/* Flower background (floating flower animation) */
+.flower-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Behind main content */
+}
+
+.flower {
+  position: absolute;
+  font-size: 2rem;
+  animation: floatUp 10s linear infinite;
+  opacity: 0.6;
+}
+
+/* Animation: flowers float upwards and fade */
+@keyframes floatUp {
+  0% {
+    transform: translateY(100vh) scale(1);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-10vh) scale(1.2);
+    opacity: 0;
+  }
+}
+
+/* Flower positions and animation delays */
+.flower:nth-child(1) { left: 10%; animation-delay: 0s; }
+.flower:nth-child(2) { left: 20%; animation-delay: 6s; }
+.flower:nth-child(3) { left: 30%; animation-delay: 2s; }
+.flower:nth-child(4) { left: 40%; animation-delay: 4s; }
+.flower:nth-child(5) { left: 55%; animation-delay: 7s; }
+.flower:nth-child(6) { left: 65%; animation-delay: 5s; }
+.flower:nth-child(7) { left: 80%; animation-delay: 1s; }
+.flower:nth-child(8) { left: 90%; animation-delay: 3s; }
+
+/* Music toggle button (bottom right corner) */
+#music-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #f97e9d;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  cursor: pointer;
+  z-index: 1000;
+  font-family: 'Press Start 2P', cursive;
+}
+
+#music-toggle:hover {
+  background-color: #ffb3c1;
+}

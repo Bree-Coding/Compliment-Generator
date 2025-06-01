@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Compliment Generator</title>
+    
+    <!-- Link to external CSS stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- Decorative flower background -->
+    <div class="flower-bg">
+        <div class="flower">🌸</div>
+        <div class="flower">🌼</div>
+        <div class="flower">🌺</div>
+        <div class="flower">🌸</div>
+        <div class="flower">🌼</div>
+        <div class="flower">🌺</div>
+        <div class="flower">🌸</div>
+        <div class="flower">🌼</div>
+    </div>
+
+    <!-- Main content area -->
+    <main>
+        <div class="container">
+            <h1>🌸 Found your special text 🌸</h1>
+
+            <!-- Initial message / Compliment display -->
+            <p id="compliment">⋆˚✿˖° Click on the button to receive a compliment ! ⋆˚✿˖°</p>
+
+            <!-- Button to generate a new compliment -->
+            <button id="generate-btn">click ⸜(｡˃ ᵕ ˂ )⸝♡</button>
+        </div>
+    </main>
+
+    <!-- Sound effect for typing animation -->
+    <audio id="type-sound" src="sounds/typewriter.mp3" preload="auto"></audio>
+
+    <!-- Background music with loop -->
+    <audio id="bg-music" src="sounds/background-music.mp3" loop></audio>
+
+    <!-- Toggle button to play/pause background music -->
+    <button id="music-toggle">˚♪𝄞₊ Music</button>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
